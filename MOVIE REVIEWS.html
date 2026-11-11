@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Brozz.to</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { font-family: Arial, sans-serif; background-color: #141414; color: white; }
+
+        /* Header */
+        header { background-color: #222; padding: 20px; text-align: center; }
+        header h1 { color: #ffcc00; font-size: 32px; }
+        nav { margin-top: 15px; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 16px; }
+        nav a:hover { color: #ffcc00; }
+
+        /* Welcome Section */
+        .banner { text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #343434, #111); }
+        .banner h2 { font-size: 32px; margin-bottom: 15px; }
+        .banner p { color: #ccc; font-size: 17px; }
+
+        /* Movie Sections */
+        .movies { padding: 30px; }
+        .movies h2 { margin-bottom: 25px; color: #ffcc00; border-left: 5px solid #ffcc00; padding-left: 12px; }
+
+        .movie-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        /* Movie Card */
+        .movie-card {
+            background-color: #252525;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+        .movie-card:hover { transform: translateY(-8px); }
+        .movie-card img { width: 100%; height: 300px; object-fit: cover; background: #333; }
+
+        .movie-info { padding: 18px; }
+        .movie-info h3 { color: #ffcc00; margin-bottom: 10px; font-size: 21px; }
+        .genre { color: #aaa; font-size: 14px; margin-bottom: 10px; }
+        .rating { color: #ffcc00; margin-bottom: 10px; font-weight: bold; }
+        .movie-info p { font-size: 14px; line-height: 1.6; margin-bottom: 10px; }
+        .review { color: #8ee6a8; font-style: italic; }
+
+        /* Footer */
+        footer { background-color: #222; text-align: center; padding: 20px; margin-top: 30px; color: #aaa; }
+
+        /* Mobile Layout */
+        @media (max-width: 600px) {
+            header h1 { font-size: 25px; }
+            nav a { display: inline-block; margin: 7px; }
+            .banner h2 { font-size: 25px; }
+            .movies { padding: 18px; }
+            .movie-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🎬 MOVIE BROZZ</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#popular">Popular</a>
+            <a href="#superhero">Superhero</a>
+            <a href="#scifi">Sci-Fi &amp; Thriller</a>
+            <a href="#hits">Hollywood Hits</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="banner" id="home">
+        <h2>Discover Your Next Favourite Movie</h2>
+        <p>Explore popular films, amazing stories, and movie reviews.</p>
+    </section>
+
+    <!-- ===================== SECTION 1 ===================== -->
+    <section class="movies" id="popular">
+        <h2>Latest Releases</h2>
+        <div class="movie-container">
+
+            <!-- Movie 1 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS93aZH1bnJd7Clg_m0PGDCHjoTwJ51ROcUH6Mp9Gmf8g&s=10" alt="Clayface movie poster">
+                <div class="movie-info">
+                    <h3>Clayface</h3>
+                    <div class="genre"> Horror | Thriller | Action</div>
+                    <div class="rating">⭐ 7.5 / 10</div>
+                    <p><b>Release:</b> October 23, 2026 </p>
+                    <p><b>Cast:</b> Tom Rhys Harries, Naomi Ackie, Max Minghella</p>
+                    <p><b>Synopsis:</b>dark body-horror thriller directed by James Watkins and part of the DC Universe (DCU) Chapter One: Gods and Monsters.</p>
+                    <p class="review">Critic Review: Carving out a unique identity for itself in the DCU while closely resembling a litany of body horror classics, Clayface takes time to get going until it eventually morphs into an icky and satisfying revenge thriller.</p>
+                </div>
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBfalsoCg8tQK_vrqtrWV6-ABLukoy5dVQYu1kNOfSYa6H0-SxLoGZDnU&s=10" alt= "Ramayana: Part 1 movie poster">
+                <div class="movie-info">
+                    <h3>Ramayana: Part 1</h3>
+                    <div class="genre">Mythological Epic | Action | Adventure</div>
+                    <div class="rating">⭐ 8.6 / 10</div>
+                    <p><b>Release:</b> November 6, 2026</p>
+                    <p><b>Cast:</b> Ranbir Kapoor, Sai Pallavi, Yash</p>
+                    <p><b>Synopsis:</b>chronicles the rise of a dominant Ravana alongside Lord Rama's youth, his marriage to Sita, and his quiet, restrained 14-year exile that culminates in Sita's abduction.</p>
+                    <p class="review">Critic Review: All scale, no soul—a visually grand spectacle where Yash's Ravana outshines Ranbir Kapoor's traditional Rama.</p>
+                </div>
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="movie-card">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-750,h-550/et00417686-xywpffvzaf-landscape.jpg" alt=" Mirzapur: The Movie movie poster">
+                <div class="movie-info">
+                    <h3>Mirzapur: The Movie</h3>
+                    <div class="genre">Action | Thriller |  Crime</div>
+                    <div class="rating">⭐ 7.4 / 10</div>
+                    <p><b>Release:</b> September 4, 2026</p>
+                    <p><b>Cast:</b> Pankaj Tripathi, Ali Fazal, Divyenndu</p>
+                    <p><b>Synopsis:</b> Set as an interquel during the show's first season, the film follows crime lord Kaleen Bhaiya and his enforcers as they defend their throne against a dangerous rogue drug lord from Jaisalmer.</p>
+                    <p class="review">Critic Review: A generally positive response, praising it as an entertaining, high-octane fan-service spectacle while noting that its long runtime and chaotic second half weigh it down</p>
+                </div>
+            </div>
+
+            <!-- Movie 4 -->
+            <div class="movie-card">
+                <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2026/02/Verity-English-306x393.jpeg" alt="Verity movie poster">
+                <div class="movie-info">
+                    <h3>Verity</h3>
+                    <div class="genre">Erotic Thriller | Mystery | Suspense</div>
+                    <div class="rating">⭐ 6 / 10</div>
+                    <p><b>Release:</b>October 2, 2026</p>
+                    <p><b>Cast:</b> Anne Hathaway, Dakota Johnson , Josh Hartnett </p>
+                    <p><b>Synopsis:</b> A struggling writer hired to ghostwrite the remaining books for an incapacitated bestselling author uncovers a chilling autobiographical manuscript at the author's remote estate, pulling her into a dangerous web of obsession and deceit.</p>
+                    <p class="review">Critic Review: vapid and uneven psychological thriller</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 2 ===================== -->
+    <section class="movies" id="superhero">
+        <h2>Superhero Movies</h2>
+        <div class="movie-container">
+
+            <!-- Movie 5 -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="The Dark Knight movie poster">
+                <div class="movie-info">
+                    <h3>The Dark Knight</h3>
+                    <div class="genre">Action | Crime | Drama</div>
+                    <div class="rating">⭐ 9.0 / 10</div>
+                    <p><b>Release:</b> July 18, 2008</p>
+                    <p><b>Cast:</b> Christian Bale, Heath Ledger, Aaron Eckhart</p>
+                    <p><b>Synopsis:</b> Batman faces the Joker, a criminal mastermind who creates chaos in Gotham City.</p>
+                    <p class="review">Critic Review: An outstanding superhero film with brilliant performances and storytelling.</p>
+                </div>
+            </div>
+
+            <!-- Movie 6 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlYz674WFWJZT1uPziFxijT7SvQ9Ir4TnIUNB524gyCCagwWlkkCX6pJdpI-LJzDaoCqiu&s=10" alt="Black Panther Wakanda Forever movie poster">
+                <div class="movie-info">
+                    <h3>Black Panther: Wakanda Forever</h3>
+                    <div class="genre">Action | Adventure | Science Fiction</div>
+                    <div class="rating">⭐ 6.6 / 10</div>
+                    <p><b>Release:</b> November 11, 2022</p>
+                    <p><b>Cast:</b> Letitia Wright, Tenoch Huerta, Angela Bassett</p>
+                    <p><b>Synopsis:</b> The people of Wakanda work together to protect their kingdom while facing new challenges.</p>
+                    <p class="review">Critic Review: Impressive visuals, emotional storytelling and memorable performances.</p>
+                </div>
+            </div>
+
+            <!-- Movie 7 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuLtP_WgSFGzI9kItsqTErt_BJHZkId9BQUi9lg-aZzg&s=10"alt="Avengers End Game Poster">
+
+                <div class="movie-info">
+                    <h3>AVENGERS ENDGAME</h3>
+                    <div class="genre">ACTION | Adventure |Science Fiction </div>
+                    <div class="rating">⭐ 8.4 / 10</div>
+
+                    <p><b>Release:</b> April 5, 2023</p>
+                    <p><b>Cast:</b> Robert Downey JR ,Chris Evans ,Stan Lee </p>
+
+                    <p><b>Synopsis:</b> The surviving Avengers travel back in time to retrieve the Infinity Stones and undo the destruction caused by Thanos.</p>
+
+                    <p class="review">
+                        Critic Review: A colourful, entertaining adventure for fans of the games.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Movie 8 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt16w551E2eA50RyqbphAn9EYyN0lOey3xANGZKd6E-BwzlnXlzGob0aRhajeQvlH64WwB&s=10" alt="Guardians of the Galaxy Vol 3 movie poster">
+                <div class="movie-info">
+                    <h3>Guardians of the Galaxy Vol. 3</h3>
+                    <div class="genre">Action | Adventure | Comedy</div>
+                    <div class="rating">⭐ 7.9 / 10</div>
+                    <p><b>Release:</b> May 5, 2023</p>
+                    <p><b>Cast:</b> Chris Pratt, Zoe Saldaña, Dave Bautista</p>
+                    <p><b>Synopsis:</b> The Guardians unite for another adventure to protect one of their own.</p>
+                    <p class="review">Critic Review: A funny, emotional and entertaining superhero adventure.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 3 ===================== -->
+    <section class="movies" id="anime">
+        <h2>Anime Movies</h2>
+        <div class="movie-container">
+
+            <!-- Movie 9 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF-HSOr4IgbjJPpFZDlx32SAvl3c7NlfoBWRItu4CiR1WpYdKRzUVQMrzYAIUPwqjX_cd0&s=10" alt="Demon Slayer: Kimetsu no Yaiba – Infinity Castle movie poster">
+                <div class="movie-info">
+                    <h3>Demon Slayer: Kimetsu no Yaiba – Infinity Castle</h3>
+                    <div class="genre">Animation | Action | Dark Fantasy</div>
+                    <div class="rating">⭐ 7.7 / 10</div>
+                    <p><b>Release:</b> September 12, 2025</p>
+                    <p><b>Cast:</b> Natsuki Hanae, Akari Kito, Hiro Shimono</p>
+                    <p><b>Synopsis:</b> The Demon Slayer Corps enters Muzan's shifting Infinity Castle for the final showdown with the demons.</p>
+                    <p class="review">Critic Review: Breathtaking animation and battles, praised by critics with a 98% Rotten Tomatoes score.</p>
+                </div>
+            </div>
+
+            <!-- Movie 10 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_kdXl0a__VrjFhuICBIxNlDBYrqXqq9JrKm88l3iNfw&s=10" alt="Attack on Titan: The Last Attack movie poster">
+                <div class="movie-info">
+                    <h3>Attack on Titan: The Last Attack</h3>
+                    <div class="genre">Animation | Action | Dark Fantasy</div>
+                    <div class="rating">⭐ 8.9 / 10</div>
+                    <p><b>Release:</b>  July 24, 2026</p>
+                    <p><b>Cast:</b> Yuki Kaji, Yui Ishikawa, Marina Inoue</p>
+                    <p><b>Synopsis:</b> The two final episodes of the Final Season combined into one feature-length film, showing the end of the war against the Titans.</p>
+                    <p class="review">Critic Review:The film's real significance is how it gathers over a decade of storytelling into a single, uninterrupted political tragedy.</p>
+                </div>
+            </div>
+
+            <!-- Movie 11 -->
+            <div class="movie-card">
+                <img src="https://a.storyblok.com/f/178900/1080x1350/bfe6f01d8f/slbts_kv.jpg/m/filters:quality(95)format(webp)" alt="Solo Leveling: Beyond the System movie poster">
+                <div class="movie-info">
+                    <h3>Solo Leveling: Beyond the System</h3>
+                    <div class="genre">Crime | Drama | Thriller</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b> Upcoming</p>
+                    <p><b>Cast:</b> Taito Ban, Reina Ueda, Genta Nakamura</p>
+                    <p><b>Synopsis:</b> Sung Jinwoo returns to the double dungeon to confront the Architect, uncover the true origin of his leveling system, and step into the high-stakes global war between the Monarchs and Rulers.</p>
+                    </div>
+            </div>
+
+            <!-- Movie 12 -->
+            <div class="movie-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR93q1kT1mfw5YbkiJj4mrAroMvuDfYQr5km-ZXCIN0Oaz-L2pIQzfhX6U&s=10" alt="One Piece Film: God Valley movie poster">
+                <div class="movie-info">
+                    <h3>One Piece Film: God Valley</h3>
+                    <div class="genre">Animation | Action | Adventure</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b> Summer 2027 </p>
+                    <p><b>Cast:</b> To be announced</p>
+                    <p><b>Synopsis:</b> Adapts the legendary God Valley Incident, the flashback story from the Elbaph arc.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================== SECTION 4 ===================== -->
+    <section class="movies" id="hits">
+        <h2>Upcoming Movies</h2>
+        <div class="movie-container">
+
+            <!-- Movie 13 -->
+            <div class="movie-card">
+                <img src="https://cdn.district.in/movies-assets/images/cinema/avenger-%20(1)-3e6ab470-d6ae-11f1-9d08-63dbb7fa7e8c.jpg?im=Resize,width=400" alt="Avengers: Doomsday movie poster">
+                <div class="movie-info">
+                    <h3>Avengers: Doomsday</h3>
+                    <div class="genre">Action | Adventure | Science Fiction</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b>December 17, 2026</p>
+                    <p><b>Cast:</b>  Robert Downey Jr., Pedro Pascal, Chris Hemsworth</p>
+                    <p><b>Synopsis:</b>  Heroes from three different worlds must unite to face a catastrophic danger, with Doctor Doom as the villain.</p>
+                </div>
+            </div>
+
+            <!-- Movie 14 -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8b8R8l88Qje9dn9OE8PY05Nxl1X.jpg" alt="Dune: Part Three movie poster">
+                <div class="movie-info">
+                    <h3>Dune: Part Three</h3>
+                    <div class="genre">Science Fiction | Adventure | Drama</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b>December 18, 2026</p>
+                    <p><b>Cast:</b> Timothée Chalamet, Zendaya, Robert Pattinson</p>
+                    <p><b>Synopsis:</b> Denis Villeneuve concludes his trilogy, adapting Frank Herbert's Dune Messiah.</p>
+                </div>
+            </div>
+
+            <!-- Movie 15 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BY2M5ZmU0MTYtODRmNC00MDAzLWE2N2UtYTExMDYwYmZjNWJmXkEyXkFqcGc@._V1_.jpg" alt="Fauzi movie poster">
+                <div class="movie-info">
+                    <h3> Fauzi</h3>
+                    <div class="genre">Period | War | Action Drama</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b>December 3, 2026</p>
+                    <p><b>Cast:</b> Prabhas, Imanvi, Mithun Chakraborty</p>
+                    <p><b>Synopsis:</b> A period war drama starring Prabhas, directed by Hanu Raghavapudi.</p>
+                </div>
+            </div>
+
+            <!-- Movie 16 -->
+            <div class="movie-card">
+                <img src="https://m.media-amazon.com/images/M/MV5BOWIxZWYxNTItOTQ1MS00NGEzLWE0NzktZTRiMDFkMTU3YTlhXkEyXkFqcGc@._V1_.jpg" alt="Varanasi movie poster">
+                <div class="movie-info">
+                    <h3>Varanasi</h3>
+                    <div class="genre">Action | Adventure</div>
+                    <div class="rating">⭐ N/A</div>
+                    <p><b>Release:</b>April 7, 2027</p>
+                    <p><b>Cast:</b> Mahesh Babu, Priyanka Chopra, Prithviraj Sukumaran</p>
+                    <p><b>Synopsis:</b>S.S. Rajamouli's globe-spanning epic blending Hindu mythology with futuristic threats.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Movie Brozz | All Rights Reserved</p>
+        <p>Enjoy Movies. Explore Stories. Share Reviews.</p>
+    </footer>
+
+</body>
+</html>
